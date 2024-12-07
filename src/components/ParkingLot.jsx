@@ -2,9 +2,14 @@ import React from 'react';
 import '../styles/ParkingLot.css';
 
 const ParkingLot = ({ name, spots }) => {
+    const COLS = 3;  // Fixed number of columns
     const rows = [];
-    for (let i = 0; i < 3; i++) {
-        const row = spots.slice(i * 3, (i + 1) * 3);
+    // Determine number of rows based on parking lot name
+    const numRows = spots.length / COLS;
+
+    // Create rows based on parking lot type
+    for (let i = 0; i < numRows; i++) {
+        const row = spots.slice(i * COLS, (i + 1) * COLS);
         rows.push(row);
     }
 

@@ -46,3 +46,7 @@
 >     at ParkingProvider (ParkingContext.js:7:1)
 >     at App (<anonymous>)
 
+<span style="color:#89A8B2; font-weight:bold;">Prompt 3</span>
+
+> When a parking lot has an array of 12, it should generate a 3x4 matrix. When a parking lot has an array of 9, it should generate a 3x3 matrix.
+
