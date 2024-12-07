@@ -50,3 +50,29 @@
 
 > When a parking lot has an array of 12, it should generate a 3x4 matrix. When a parking lot has an array of 9, it should generate a 3x3 matrix.
 
+<span style="color:#89A8B2; font-weight:bold;">Prompt 4</span>
+
+> The second parking lot, which has an array of 12, is still showing as a 3x3 matrix. I think the issue is caused by the following code.
+>
+> ```
+> const parseParkingStatus = (status) => {
+>     try {
+>         const lots = {};
+>         if (!status) return initialState.parkingLots;
+> 
+>         status.split('\n').forEach(lotStatus => {
+>             const [name, carsStr] = lotStatus.split(': ');
+>             const carsArray = carsStr
+>                 .replace('[', '')
+>                 .replace(']', '')
+>                 .split(',')
+>                 .map(plate => plate.trim())
+>                 .filter(plate => plate.length > 0);
+> 
+>             const size = name === 'City Mall Garage' ? 12 : 9;
+>             lots[name] = Array(9).fill(null).map((_, i) => carsArray[i] || null);
+>         });
+> ```
+
+
+

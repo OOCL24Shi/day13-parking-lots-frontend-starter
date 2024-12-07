@@ -46,7 +46,7 @@ const parseParkingStatus = (status) => {
                 .filter(plate => plate.length > 0);
 
             const size = name === 'City Mall Garage' ? 12 : 9;
-            lots[name] = Array(9).fill(null).map((_, i) => carsArray[i] || null);
+            lots[name] = Array(size).fill(null).map((_, i) => carsArray[i] || null);
         });
         return lots;
     } catch (error) {
