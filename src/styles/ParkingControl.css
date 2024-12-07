@@ -1,10 +1,16 @@
+.parking-control-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
 .parking-control {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    padding: 2rem;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #e0e0e0;
 }
 
 .plate-input {
@@ -13,6 +19,7 @@
     border-radius: 4px;
     font-size: 1rem;
     width: 200px;
+    text-transform: uppercase;
 }
 
 .strategy-select {
@@ -21,6 +28,7 @@
     border-radius: 4px;
     font-size: 1rem;
     background-color: white;
+    cursor: pointer;
 }
 
 .control-button {
@@ -29,7 +37,7 @@
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
 }
 
 .park {
@@ -44,4 +52,17 @@
 
 .control-button:hover {
     opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.error-message {
+    color: #f44336;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.loading-message {
+    color: #2196F3;
+    margin-top: 1rem;
+    font-size: 0.9rem;
 }

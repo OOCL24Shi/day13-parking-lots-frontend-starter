@@ -36,5 +36,13 @@
 
 <span style="color:#89A8B2; font-weight:bold;">Prompt 2</span>
 
-> 
+> Please help fix below bugs:
+>
+> hook.js:608 An error occurred in the <ParkingProvider> component.
+>
+> Consider adding an error boundary to your tree to customize error handling behavior.
+> Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+>  Error Component Stack
+>     at ParkingProvider (ParkingContext.js:7:1)
+>     at App (<anonymous>)
 
